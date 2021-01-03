@@ -71,12 +71,12 @@ By pressing ‘H’ when backup units are **on foot** and **near you**, they fol
 
 
 —— CREDITS ——
-  (IceHax) - for publishing an incomplete amublance script on cfx.re which gave Mooreiche the idea and basic structure to create this script
-  Mooreiche - Original Uploader, huge thanks for uploading & allowing modification !
-  Mobius1 - huge thanks for fixing bugs and saving Mooreiche alot of headache!
-	AxNaash & Neozander - for adding support of multiple backups & types / following ability for both peds and vehicles / adding an option menu / general improvements
-	Warxander - for warmenu
-	MrDaGree - for Draw3D function
+* (IceHax) - for publishing an incomplete amublance script on cfx.re which gave Mooreiche the idea and basic structure to create this script
+* Mooreiche - Original Uploader, huge thanks for uploading & allowing modification !
+* Mobius1 - huge thanks for fixing bugs and saving Mooreiche alot of headache!
+* AxNaash & Neozander - for adding support of multiple backups & types / following ability for both peds and vehicles / adding an option menu / general improvements
+* Warxander - for warmenu
+* MrDaGree - for Draw3D function
   
 **As the orignal uploader inquired, you can edit, reupload, fix, delete, sniff, smoke or what ever you want with this script.**
    **JUST DONT DELETE ANYONE OUT OF THE CREDITS AND ADD YOUR NAME TO IT!!!**
