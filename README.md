@@ -1,7 +1,7 @@
 # AIBackup for FiveM-FivePD
  **PLEASE READ EVERYTHING BEFORE USING IT.**
 
-**VERY IMPORTANT** : To run this, you will have to download JayMontana36/mythic_notify on GitHub and start it (‘ensure mythic_notify’) before ‘ensure AIBackup’ in your server.cfg.
+**VERY IMPORTANT** : To run this, you will have to download JayMontana36/mythic_notify on GitHub and start it (‘ensure mythic_notify’) before ‘ensure AIBackup’ in your server.cfg. Make sure to rename the downloaded folder "AIBackup-FiveM-FivePD--main" to "AIBackup" so that you can ensure it properly as said earlier.
 
 This has been tested on a local server with two players.
 
