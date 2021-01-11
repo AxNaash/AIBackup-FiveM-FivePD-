@@ -133,7 +133,7 @@ else
 end
 
 
- 
+ -- keybinds --
 Citizen.CreateThread(function() -- Menu integration
 	local items = {backuptype.name, backuptype2.name, backuptype3.name, backuptype4.name, backuptype5.name, backuptype6.name}
 	local currentItemIndex = 1
@@ -289,7 +289,7 @@ Citizen.CreateThread(function() -- Menu integration
 			end
 			WarMenu.Display()
 			
-		elseif IsDisabledControlJustPressed(0, 57) then -- F10 key
+		elseif ((IsDisabledControlJustPressed(0, 57) or IsControlJustPressed(0, 57)) and GetLastInputMethod(0)) then -- F10 key --  IsDisabledControlJustPressed(0, 57)
 			WarMenu.OpenMenu('AIBMenu')
 		end
 
@@ -389,7 +389,7 @@ local player = PlayerId(-1)
 
 						end
 					end
-					if IsControlJustPressed(1, 24) then   --LEFT MOUSE BUTTON
+					if ((IsDisabledControlJustPressed(0, 24) or IsControlJustPressed(0, 24)) and GetLastInputMethod(0)) then   --LEFT MOUSE BUTTON
 						for j=1,maxnum do 
 							local randWait = math.random(200,1000)
 							local decay = math.random(200,400)
@@ -421,12 +421,12 @@ local player = PlayerId(-1)
 end)
 
 
--- keybinds --
+
 
 Citizen.CreateThread(function()             --Stop backup from Pursuing you if called in a vehicle 
 	while true do
 		Citizen.Wait(0)
-		if IsControlJustPressed(1, 10) --[[ PageUp ]] then
+		if IsControlJustPressed(1, 316) --[[ PageUp ]] then
 			if bcount > 1 then
 				for i=1,bcount-1 do
 					EndPursuit[i] = true
@@ -446,7 +446,7 @@ end)
 Citizen.CreateThread(function()             --Launch
     while true do
         Citizen.Wait(0)
-		if IsControlJustPressed(1, 314) --[[ Num+ ]] then
+		if ((IsDisabledControlJustPressed(0, 314) or IsControlJustPressed(0, 314)) and GetLastInputMethod(0))--[[ Num+ ]] then
 			if playerOnDuty then
 				if playerSpawned and onroute == 1 then
 					ShowNotification("Wait until the backup arrives, then press ~b~+")
@@ -467,7 +467,7 @@ Citizen.CreateThread(function()				--All Dispatch leaves scene
     while true do
         Citizen.Wait(0)
         if playerSpawned then
-            if IsControlJustPressed(1, 296) --[[ Delete ]] and not deleteBool  then
+            if ((IsDisabledControlJustPressed(0, 296) or IsControlJustPressed(0, 296)) and GetLastInputMethod(0)) --[[ Delete ]] and not deleteBool  then
                 deleteBool = true
 				LeaveScene()
 				onroute = 0
@@ -484,7 +484,7 @@ Citizen.CreateThread(function()				--Last Dispatch leaves scene
     while true do
         Citizen.Wait(0)
         if playerSpawned then
-            if IsControlJustPressed(1, 315) --[[ Num- ]] then
+            if ((IsDisabledControlJustPressed(0, 315) or IsControlJustPressed(0, 315)) and GetLastInputMethod(0)) --[[ Num- ]] then
                 LeaveSceneLast()
 
             end
@@ -497,14 +497,14 @@ Citizen.CreateThread(function()    --function to assign a key to activate the fu
         Citizen.Wait(0)
 		if playerSpawned and nearplayer[1] then
 		
-			if IsControlJustPressed(1, 74) and isfollowing == false --[[ H key ]] then
+			if ((IsDisabledControlJustPressed(0, 74) or IsControlJustPressed(0, 74)) and GetLastInputMethod(0)) and isfollowing == false --[[ H key ]] then
 				isfollowing = true
 				ShowNotification("~b~Backup is following you")
 				ShowNotification("Press ~r~H ~s~to stop following you")
 
 
 				
-			elseif IsControlJustPressed(1, 74) and isfollowing == true --[[ H key ]] then
+			elseif ((IsDisabledControlJustPressed(0, 74) or IsControlJustPressed(0, 74)) and GetLastInputMethod(0)) and isfollowing == true --[[ H key ]] then
 				isfollowing = false
 				ShowNotification("~r~Backup is not following you anymore")
 				for idx = 1,maxnum do
