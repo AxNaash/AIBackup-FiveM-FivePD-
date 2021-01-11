@@ -1,5 +1,9 @@
 # AIBackup for FiveM-FivePD
  **PLEASE READ EVERYTHING BEFORE USING IT.**
+ 
+ **CHANGELOG** :
+Version 1.0.1 : Controller Button presses are no longer taken into account.
+
 
 **INSTALL INSTRUCTIONS** : Make sure to rename the downloaded folder "AIBackup-FiveM-FivePD--main" to "AIBackup" so that you can load it easily, then paste it in your /resource folder. **To run this, you will also have to download JayMontana36/mythic_notify on GitHub and start it (‘ensure mythic_notify’) before ‘ensure AIBackup’ in your server.cfg**. 
 
