@@ -389,7 +389,7 @@ local player = PlayerId(-1)
 
 						end
 					end
-					if ((IsDisabledControlJustPressed(0, 24) or IsControlJustPressed(0, 24)) and GetLastInputMethod(0)) then   --LEFT MOUSE BUTTON
+					if IsControlJustPressed(1, 24) then   --LEFT MOUSE BUTTON
 						for j=1,maxnum do 
 							local randWait = math.random(200,1000)
 							local decay = math.random(200,400)
@@ -419,7 +419,6 @@ local player = PlayerId(-1)
 
 	end
 end)
-
 
 
 
@@ -863,7 +862,7 @@ AddEventHandler('POL:SpawnInVehicle', function(player)
     end
 end)
 
--- command --
+-- commands --
 RegisterCommand("aib", function()
     local player = PlayerPedId()
 			if playerSpawned and onroute == 1 then
