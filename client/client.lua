@@ -514,7 +514,7 @@ Citizen.CreateThread(function()    --function to assign a key to activate the fu
 				isfollowing = false
 				ShowNotification("~r~Backup is not following you anymore")
 				for idx = 1,maxnum do
-					if active[idx] then
+					if active[idx] and checkU[idx] then
 						if 	not IsPedInAnyVehicle(driver_ped[idx],false) or not IsPedInAnyVehicle(passenger_ped[idx],false) then
 							RequestAnimDict("amb@code_human_police_investigate@idle_a")
 							while (not HasAnimDictLoaded("amb@code_human_police_investigate@idle_a")) do 
