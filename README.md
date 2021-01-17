@@ -59,7 +59,7 @@ If you shoot while aiming at a ped (excluding your backup units) they will shoot
 **IMPORTANT** : As mentioned earlier backup units will not perform these actions (aim and shoot) if they are following the player, i.e if the ‘following action’ is activated (by pressing ‘H’ ) until it is deactivated (by pressing ‘H’ once again).
 
 
-—— KEYBINDS ——
+—— **KEYBINDS** ——
 
 You can modify these in ‘client.lua’ :
 
@@ -82,7 +82,7 @@ By pressing ‘H’ when backup units are **on foot** and **near you**, they fol
 * if you are on foot, spawned backup units will follow you on foot. 
 * if you are in a vehicle, spawned backup units will follow you in their vehicle.
 
-—— USEFUL COMMANDS ——
+—— **USEFUL COMMANDS** ——
 
 /getout i  --with 'i' a number between 1 and the maximum number of backup units. Gets unit 'i' out of their vehicle. Use it they get stuck.<br/>
 /getin i   --with 'i' a number between 1 and the maximum number of backup units. Gets unit 'i' into their vehicle. Use it they get stuck.<br/>
