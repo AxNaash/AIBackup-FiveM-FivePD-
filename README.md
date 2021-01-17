@@ -84,11 +84,11 @@ By pressing ‘H’ when backup units are **on foot** and **near you**, they fol
 
 —— USEFUL COMMANDS ——
 
-/getout i  --with 'i' a number between 1 and the maximum number of backup units. Gets unit 'i' out of their vehicle. Use it they get stuck.
-/getin i   --with 'i' a number between 1 and the maximum number of backup units. Gets unit 'i' into their vehicle. Use it they get stuck.
-*Example : /getout 1  ==> to make the first unit get out of their vehicle.*
-/onduty  --to change your state to "on duty".
-/offduty  --to change your state to "off duty".
+/getout i  --with 'i' a number between 1 and the maximum number of backup units. Gets unit 'i' out of their vehicle. Use it they get stuck.<br/>
+/getin i   --with 'i' a number between 1 and the maximum number of backup units. Gets unit 'i' into their vehicle. Use it they get stuck.<br/>
+*Example : /getout 1  ==> to make the first unit get out of their vehicle.*<br/>
+/onduty  --to change your state to "on duty".<br/>
+/offduty  --to change your state to "off duty".<br/>
 /stopNotify  --to clear top right notifications.
 
 
