@@ -641,6 +641,12 @@ AddEventHandler('POL:Spawn', function(player)
 
             SetVehicleSiren(vehicle[fcount], true)
             EnterVehicle(driver_ped[fcount],passenger_ped[fcount],vehicle[fcount])
+			
+			while not IsPedInAnyVehicle(driver_ped[fcount],false) or not IsPedInAnyVehicle(passenger_ped[fcount],false) do
+				EnterVehicle(driver_ped[fcount],passenger_ped[fcount],vehicle[fcount])
+				Wait(200)
+			end
+			
 			TaskVehicleDriveToCoordLongrange(driver_ped[fcount], vehicle[fcount], pc.x, pc.y, pc.z, 60.0, drivingStyle, 15.0)
             ShowAdvancedNotification(companyIcon, companyName, "Panic Button", "Your Panic Button was triggered. A CODE3 Unit has been dispatched to your location.")
 			
@@ -896,23 +902,45 @@ RegisterCommand("CB", function()
 	end
 end, false)
 
-RegisterCommand("getout", function()
+RegisterCommand("getout", function(source, args)
     local player = PlayerPedId()
-	for idx = 1,maxnum  do 
-		if player~=nil and active[idx] then
-			LeaveVehicle(driver_ped[idx],passenger_ped[idx],vehicle[idx])
-		end
-	end	
+	if args[1] == nil then
+		print("No backup unit (number) was supplied.")
+		return
+	end 
+	
+	local idx = tonumber(args[1])
+	if idx < 1 or idx > maxnum then
+		print(string.format("Backup unit must be a number between 1 and %s",maxnum))
+		return
+	end 	
+
+	if player~=nil and active[idx] then
+		LeaveVehicle(driver_ped[idx],passenger_ped[idx],vehicle[idx])
+	end
+
+	
 end, false)
 
-RegisterCommand("getin", function()
+RegisterCommand("getin", function(source, args)
     local player = PlayerPedId()
-	for idx = 1,maxnum  do 
-		if player~=nil and active[idx] and not IsPedInAnyVehicle(driver_ped[idx],false) or not IsPedInAnyVehicle(passenger_ped[idx],false) then
-			EnterVehicle(driver_ped[idx],passenger_ped[idx],vehicle[idx])
-		end
-	end	
+	if args[1] == nil then
+		print("No backup unit (number) was supplied.")
+		return
+	end 
+	
+	local idx = tonumber(args[1])
+	if idx < 1 or idx > maxnum then
+		print(string.format("Backup unit must be a number between 1 and %s",maxnum))
+		return
+	end 	
+	
+	if player~=nil and active[idx] and not IsPedInAnyVehicle(driver_ped[idx],false) or not IsPedInAnyVehicle(passenger_ped[idx],false) then
+		EnterVehicle(driver_ped[idx],passenger_ped[idx],vehicle[idx])
+	end
+	
 end, false)
+
 
 RegisterCommand("onduty", function()
 	playerOnDuty = true
