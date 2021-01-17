@@ -43,6 +43,7 @@ fibcar        = GetHashKey('fbi')
 sheriffcar    = GetHashKey('sheriff')
 swatcar       = GetHashKey('fbi2')
 policeman     = GetHashKey("s_m_y_cop_01")
+policewoman   = GetHashKey("s_f_y_cop_01")
 fibman        = GetHashKey("s_m_m_fibsec_01")
 sheriff       = GetHashKey("s_m_y_sheriff_01")
 swat          = GetHashKey("s_m_y_swat_01")
@@ -97,9 +98,10 @@ backuptype3 = {car = swatcar, ped = swat, weapon1 = GetHashKey("WEAPON_SMG"), we
 backuptype4 = {car = sheriffcar, ped = sheriff, weapon1 = GetHashKey("WEAPON_COMBATPISTOL"), weapon2 = GetHashKey("WEAPON_PUMPSHOTGUN"), name = "LSSD"}
 backuptype5 = {car = bombsquadcar, ped = bombsquad, weapon1 = GetHashKey("WEAPON_COMBATPISTOL"), weapon2 = GetHashKey("WEAPON_CARABINERIFLE"), name = "Bombing Squad"}
 backuptype6 = {car = police, ped = policeman, weapon1 = GetHashKey("WEAPON_STUNGUN"), weapon2 = GetHashKey("WEAPON_PUMPSHOTGUN"), name = "LSPD non-lethal"}  -- !!! works if you have the non-lethal shotgun replacing the pumpshotgun
+backuptype7 = {car = police, ped = policewoman, weapon1 = GetHashKey("WEAPON_COMBATPISTOL"), weapon2 = GetHashKey("WEAPON_PUMPSHOTGUN"), name = "LSPD Female"}
 
 bcpindex = 1
-backups = {backuptype, backuptype2, backuptype3,backuptype4, backuptype5, backuptype6}
+backups = {backuptype, backuptype2, backuptype3,backuptype4, backuptype5, backuptype6, backuptype7}
 slctd_backup = backups[1]
 onroute = 0
 
@@ -135,7 +137,7 @@ end
 
  -- keybinds --
 Citizen.CreateThread(function() -- Menu integration
-	local items = {backuptype.name, backuptype2.name, backuptype3.name, backuptype4.name, backuptype5.name, backuptype6.name}
+	local items = {backuptype.name, backuptype2.name, backuptype3.name, backuptype4.name, backuptype5.name, backuptype6.name,  backuptype7.name}
 	local currentItemIndex = 1
 	local selectedItemIndex = 1
 	local currentUnitsIndex = 1
@@ -160,7 +162,7 @@ Citizen.CreateThread(function() -- Menu integration
 
 	while true do	
 		if WarMenu.IsMenuOpened('AIBMenu') then
-			WarMenu.ToolTip(string.format("~r~Max number of units you can spawn : ~b~%s",maxnum),0.135)
+			WarMenu.ToolTip(string.format("~r~Max number of units you can spawn : ~b~%s\n~s~Selected Backup Unit :    ~b~%s",maxnum,slctd_backup.name),0.13)
 			if WarMenu.CheckBox('On Duty', checkbox) then
 				checkbox = not checkbox
 				playerOnDuty = not playerOnDuty
