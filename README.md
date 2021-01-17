@@ -6,8 +6,8 @@
 
 
 Version 1.0.1   : Controller Button presses are no longer taken into account.<br/>
-Version 1.0.1b : Bug fix : Backup Units now shoot when shooting with a Controller.
-
+Version 1.0.1b : Bug fix : Backup Units now shoot when shooting with a Controller.<br/>
+Version 1.0.2 : Added a Female LSPD Unit and an on-screen "Selected Backup Unit" in the Menu.
 
 /
 
