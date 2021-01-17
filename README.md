@@ -5,10 +5,11 @@
  
 
 
-Version 1.0.1   : Controller Button presses are no longer taken into account.<br/>
+Version 1.0.1  : Controller Button presses are no longer taken into account.<br/>
 Version 1.0.1b : Bug fix : Backup Units now shoot when shooting with a Controller.<br/>
-Version 1.0.2   : Added a Female LSPD Unit, a Forensics Unit, and an on-screen "Selected Backup Unit" in the Menu.<br/>
-Version 1.0.2b : Added a "getin" command to force units to get into their vehicles if stuck outside of it.
+Version 1.0.2  : Added a Female LSPD Unit, a Forensics Unit, and an on-screen "Selected Backup Unit" in the Menu.<br/>
+Version 1.0.2b : Added a "getin" command to force units to get into their vehicles if stuck outside of it.<br/>
+Version 1.0.3  : Fix for backup units not entering their car when spawned. Fix in 'getout' command.
 
 /
 
@@ -80,6 +81,15 @@ You can select which units do follow you by pressing the 'Set units that can fol
 By pressing ‘H’ when backup units are **on foot** and **near you**, they follow you. If you press it another time, they will stop following you. Etc.. If the ‘following action’ is activated :
 * if you are on foot, spawned backup units will follow you on foot. 
 * if you are in a vehicle, spawned backup units will follow you in their vehicle.
+
+—— USEFUL COMMANDS ——
+
+/getout i  --with 'i' a number between 1 and the maximum number of backup units. Gets unit 'i' out of their vehicle. Use it they get stuck.
+/getin i   --with 'i' a number between 1 and the maximum number of backup units. Gets unit 'i' into their vehicle. Use it they get stuck.
+*Example : /getout 1  ==> to make the first unit get out of their vehicle.*
+/onduty  --to change your state to "on duty".
+/offduty  --to change your state to "off duty".
+/stopNotify  --to clear top right notifications.
 
 
 —— CREDITS ——
