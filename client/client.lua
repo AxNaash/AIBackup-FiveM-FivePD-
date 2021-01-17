@@ -905,6 +905,15 @@ RegisterCommand("getout", function()
 	end	
 end, false)
 
+RegisterCommand("getin", function()
+    local player = PlayerPedId()
+	for idx = 1,maxnum  do 
+		if player~=nil and active[idx] and not IsPedInAnyVehicle(driver_ped[idx],false) or not IsPedInAnyVehicle(passenger_ped[idx],false) then
+			EnterVehicle(driver_ped[idx],passenger_ped[idx],vehicle[idx])
+		end
+	end	
+end, false)
+
 RegisterCommand("onduty", function()
 	playerOnDuty = true
 	exports['mythic_notify']:PersistentHudText('START',idHUD+3,'inform', "AI Backup : Player is ON Duty", { ['background-color'] = '#000000', ['color'] = '#39d034' })
