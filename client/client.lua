@@ -49,6 +49,9 @@ sheriff       = GetHashKey("s_m_y_sheriff_01")
 swat          = GetHashKey("s_m_y_swat_01")
 bombsquad	  = GetHashKey("u_m_y_juggernaut_01")
 bombsquadcar  = GetHashKey('riot')
+forensics     = GetHashKey('g_m_m_chemwork_01')
+forensicscar  = GetHashKey('policet')
+
 companyName   = "Dispatch"
 companyIcon   = "CHAR_CALL911"
 drivingStyle  = 537133628 -- https://www.vespura.com/fivem/drivingstyle/  4457020    or 262144       old = 537133628
@@ -99,9 +102,11 @@ backuptype4 = {car = sheriffcar, ped = sheriff, weapon1 = GetHashKey("WEAPON_COM
 backuptype5 = {car = bombsquadcar, ped = bombsquad, weapon1 = GetHashKey("WEAPON_COMBATPISTOL"), weapon2 = GetHashKey("WEAPON_CARABINERIFLE"), name = "Bombing Squad"}
 backuptype6 = {car = police, ped = policeman, weapon1 = GetHashKey("WEAPON_STUNGUN"), weapon2 = GetHashKey("WEAPON_PUMPSHOTGUN"), name = "LSPD non-lethal"}  -- !!! works if you have the non-lethal shotgun replacing the pumpshotgun
 backuptype7 = {car = police, ped = policewoman, weapon1 = GetHashKey("WEAPON_COMBATPISTOL"), weapon2 = GetHashKey("WEAPON_PUMPSHOTGUN"), name = "LSPD Female"}
+backuptype8 = {car = forensicscar, ped = forensics, weapon1 = GetHashKey("WEAPON_COMBATPISTOL"), weapon2 = GetHashKey("WEAPON_COMBATPISTOL"), name = "Forensics"}
+
 
 bcpindex = 1
-backups = {backuptype, backuptype2, backuptype3,backuptype4, backuptype5, backuptype6, backuptype7}
+backups = {backuptype, backuptype2, backuptype3,backuptype4, backuptype5, backuptype6, backuptype7, backuptype8}
 slctd_backup = backups[1]
 onroute = 0
 
@@ -137,7 +142,7 @@ end
 
  -- keybinds --
 Citizen.CreateThread(function() -- Menu integration
-	local items = {backuptype.name, backuptype2.name, backuptype3.name, backuptype4.name, backuptype5.name, backuptype6.name,  backuptype7.name}
+	local items = {backuptype.name, backuptype2.name, backuptype3.name, backuptype4.name, backuptype5.name, backuptype6.name,  backuptype7.name,  backuptype8.name}
 	local currentItemIndex = 1
 	local selectedItemIndex = 1
 	local currentUnitsIndex = 1
@@ -1310,6 +1315,5 @@ function ShowNotification(text)
     AddTextComponentString(text)
     DrawNotification(false, false)
 end
-
 
 
