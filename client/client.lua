@@ -728,7 +728,7 @@ Citizen.CreateThread(function() -- Menu integration
 			
 		elseif WarMenu.IsMenuOpened('numberOfUnits') then
 			WarMenu.ToolTip(string.format("~r~Max number of units you can spawn : ~b~%s",maxnum),0.135)
-			if WarMenu.ComboBox('~g~Selected Backup', Nunits, currentUnitsIndex, selectedUnitsIndex, function(currentIndex, selectedIndex)
+			if WarMenu.ComboBox('~g~Set max number of units', Nunits, currentUnitsIndex, selectedUnitsIndex, function(currentIndex, selectedIndex)
 					currentUnitsIndex = currentIndex
 					selectedUnitsIndex = selectedIndex
 				end) then
@@ -829,7 +829,8 @@ local player = PlayerId(-1)
 		Citizen.Wait(0)
 		local AimBool, AimTarget = GetEntityPlayerIsFreeAimingAt(player)	
 		local isTargetingUnit = false
-
+		
+		
 		
 		if AimBool and not isfollowing then	
 			if DoesEntityExist(AimTarget) and IsEntityAPed(AimTarget) then
