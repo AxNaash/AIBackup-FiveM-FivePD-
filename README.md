@@ -20,6 +20,7 @@ Version 1.1    : <br/>* Code2 or Code3 Backup possibility added. You can set it 
 **New !!** <br/>
 Driver / Passenger : controllable separately now for Following and Animation !<br/>
 Animation Menu : You can select animations for backup units if on foot. <br/>
+Animations List : Cop Traffic (Beacon), Cop Idle, Lookout, Kneel, Guard, CPR, Talkie, Sit on the ground, Notepad, Clipboard and Reaching gun.<br/>
 
 Remark : If you want units to stop from looking at you after following you, unselect them then press H twice. Tada ! They don't look at you anymore. 
 <br/>/
