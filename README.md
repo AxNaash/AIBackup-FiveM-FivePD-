@@ -16,11 +16,14 @@ Version 1.1    : <br/>* Code2 or Code3 Backup possibility added. You can set it 
 		               * FollowMe function has been improved : now you can ask peds separately to follow you if on foot.<br/>
 		               * Fix for the CarbineRifle Model to spawn.<br/>
 		               * Big change : a new Animation Menu has been added to the main Menu : you can set an animation for each ped separately if on foot, change their heading and access to the Following Menu through Animation Menu.
+Version 1.1.1  : Added a Button Check ("Auto Aim") to stop them from aiming whenever you aim if unchecked. 
 
 **New !!** <br/>
 Driver / Passenger : controllable separately now for Following and Animation !<br/>
 Animation Menu : You can select animations for backup units if on foot. <br/>
 Animations List : Cop Traffic (Beacon), Cop Idle, Lookout, Kneel, Guard, CPR, Talkie, Sit on the ground, Notepad, Clipboard and Reaching gun.<br/>
+Important : Cop Traffic does not work on Female Models. <br/>
+<br/>
 
 Remark : If you want units to stop from looking at you after following you, unselect them then press H twice. Tada ! They don't look at you anymore. 
 <br/>/
