@@ -128,7 +128,7 @@ polspawn = 0
 lastonetrig = 0
 lastoneid = 0
 
-
+local aimActivate = true	
 local showHeadDisplay = true
 local ignorePlayerNameDistance = false
 local disPlayerNames = 15
@@ -287,7 +287,7 @@ Citizen.CreateThread(function() -- Menu integration
 	local Nunits = {}
 	checkU = {}
 	checkPed = {}
-	
+
 
 	
 	
@@ -323,7 +323,9 @@ Citizen.CreateThread(function() -- Menu integration
 				else
 					exports['mythic_notify']:PersistentHudText('START',idHUD+3,'inform', "AI Backup : Player is ON Duty", { ['background-color'] = '#000000', ['color'] = '#39d034' })
 				end	
-	
+				
+			elseif WarMenu.CheckBox('Auto Aim', aimActivate) then
+				aimActivate = not aimActivate
 				
 			elseif WarMenu.Button('~g~Call for backup') then
 				if playerOnDuty then
@@ -843,10 +845,10 @@ local player = PlayerId(-1)
 				
 				
 				
-				if not isTargetingUnit then
+				if (not isTargetingUnit)  then
 					for i=1,maxnum do
 
-						if nearplayer[i] then	
+						if nearplayer[i] and aimActivate then	
 							StopAnimTask(driver[i],"amb@code_human_police_investigate@idle_a",idle_cops_gen[1],1.0)
 							StopAnimTask(passenger[i],"amb@code_human_police_investigate@idle_a",idle_cops_gen[1],1.0)
 							StopAnimTask(driver[i],"amb@code_human_police_investigate@idle_a",idle_cops_gen[2],1.0)
