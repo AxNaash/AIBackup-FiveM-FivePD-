@@ -879,7 +879,7 @@ local player = PlayerId(-1)
 								end
 							end
 							 
-							Citizen.Wait(200)
+							Citizen.Wait(0)
 								
 							TaskAimGunAtEntity(driver[i],AimTarget,-1,true)    --they will aim at entity 
 							TaskAimGunAtEntity(passenger[i],AimTarget,-1,true)
