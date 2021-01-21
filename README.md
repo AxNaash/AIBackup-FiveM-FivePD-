@@ -9,8 +9,19 @@ Version 1.0.1  : Controller Button presses are no longer taken into account.<br/
 Version 1.0.1b : Bug fix : Backup Units now shoot when shooting with a Controller.<br/>
 Version 1.0.2  : Added a Female LSPD Unit, a Forensics Unit, and an on-screen "Selected Backup Unit" in the Menu.<br/>
 Version 1.0.2b : Added a "getin" command to force units to get into their vehicles if stuck outside of it.<br/>
-Version 1.0.3  : Fix for backup units not entering their car when spawned. Fix in 'getout' command. Fix in following/unfollowing function.
+Version 1.0.3  : Fix for backup units not entering their car when spawned. Fix in 'getout' command. Fix in following/unfollowing function.<br/>
+Version 1.1    : Code2 or Code3 Backup possibility added. You can set it for one or for all units.<br/>
+		               Menu layout has been changed for more convenience.<br/>
+		               Version tag has been added to the Menu.<br/>
+		               FollowMe function has been improved : now you can ask peds separately to follow you if on foot.<br/>
+		               Fix for the CarbineRifle Model to spawn.<br/>
+		               Big change : a new Animation Menu has been added to the main Menu : you can set an animation for each ped separately if on foot, change their heading and       access to the Following Menu through Animation Menu.
 
+**New !!** <br/>
+Driver / Passenger : controllable separately now for Following and Animation !<br/>
+Animation Menu : You can select animations for backup units if on foot. <br/>
+
+Remark : If you want units to stop from looking at you after following you, unselect them then press H twice. Tada ! They don't look at you anymore. 
 /
 
 
@@ -33,6 +44,8 @@ Here are the available backup units :
     SWAT(GrangerFIB car and SWAT model)
     Bombing Squad (Riot car and Juggernaut model)
     LSPD non-lethal (the default one with non-lethal weapons : stun-gun + pump shotgun). 
+    LSPD Female (the default one with female models).     
+    Forensics (Policet car and masked ped model).     
 
 **IMPORTANT** : for the last one to be **non-lethal** you have to download the nonlethal shotgun resource and start it in your server. Otherwise, you can change the ‘weapon 2 = WEAPON_PUMPSHOTGUN’ in backuptype6 in the client.lua to ‘WEAPON_STUNGUN’.
 
