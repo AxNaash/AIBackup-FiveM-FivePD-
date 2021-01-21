@@ -10,20 +10,20 @@ Version 1.0.1b : Bug fix : Backup Units now shoot when shooting with a Controlle
 Version 1.0.2  : Added a Female LSPD Unit, a Forensics Unit, and an on-screen "Selected Backup Unit" in the Menu.<br/>
 Version 1.0.2b : Added a "getin" command to force units to get into their vehicles if stuck outside of it.<br/>
 Version 1.0.3  : Fix for backup units not entering their car when spawned. Fix in 'getout' command. Fix in following/unfollowing function.<br/>
-Version 1.1    : Code2 or Code3 Backup possibility added. You can set it for one or for all units.<br/>
-		               Menu layout has been changed for more convenience.<br/>
-		               Version tag has been added to the Menu.<br/>
-		               FollowMe function has been improved : now you can ask peds separately to follow you if on foot.<br/>
-		               Fix for the CarbineRifle Model to spawn.<br/>
-		               Big change : a new Animation Menu has been added to the main Menu : you can set an animation for each ped separately if on foot, change their heading and       access to the Following Menu through Animation Menu.
+Version 1.1    : * Code2 or Code3 Backup possibility added. You can set it for one or for all units.<br/>
+		               * Menu layout has been changed for more convenience.<br/>
+		               * Version tag has been added to the Menu.<br/>
+		               * FollowMe function has been improved : now you can ask peds separately to follow you if on foot.<br/>
+		               * Fix for the CarbineRifle Model to spawn.<br/>
+		               * Big change : a new Animation Menu has been added to the main Menu : you can set an animation for each ped separately if on foot, change their heading and access to the Following Menu through Animation Menu.
 
 **New !!** <br/>
 Driver / Passenger : controllable separately now for Following and Animation !<br/>
 Animation Menu : You can select animations for backup units if on foot. <br/>
 
 Remark : If you want units to stop from looking at you after following you, unselect them then press H twice. Tada ! They don't look at you anymore. 
-/
-
+<br/>/
+<br/>
 
 **INSTALL INSTRUCTIONS** : Make sure to rename the downloaded folder "AIBackup-FiveM-FivePD--main" to "AIBackup" so that you can load it easily, then paste it in your /resource folder. **To run this, you will also have to download JayMontana36/mythic_notify on GitHub and start it (‘ensure mythic_notify’) before ‘ensure AIBackup’ in your server.cfg**. 
 
