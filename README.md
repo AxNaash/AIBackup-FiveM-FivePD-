@@ -10,7 +10,7 @@ Version 1.0.1b : Bug fix : Backup Units now shoot when shooting with a Controlle
 Version 1.0.2  : Added a Female LSPD Unit, a Forensics Unit, and an on-screen "Selected Backup Unit" in the Menu.<br/>
 Version 1.0.2b : Added a "getin" command to force units to get into their vehicles if stuck outside of it.<br/>
 Version 1.0.3  : Fix for backup units not entering their car when spawned. Fix in 'getout' command. Fix in following/unfollowing function.<br/>
-Version 1.1    : * Code2 or Code3 Backup possibility added. You can set it for one or for all units.<br/>
+Version 1.1    : <br/>* Code2 or Code3 Backup possibility added. You can set it for one or for all units.<br/>
 		               * Menu layout has been changed for more convenience.<br/>
 		               * Version tag has been added to the Menu.<br/>
 		               * FollowMe function has been improved : now you can ask peds separately to follow you if on foot.<br/>
