@@ -1138,7 +1138,7 @@ AddEventHandler('POL:Spawn', function(player)
 
 			
             local offset = GetOffsetFromEntityInWorldCoords(player, 0, 50, 50)
-            local heading, spawn = GetNthClosestVehicleNodeFavourDirection(offset.x, offset.y, offset.z, pc.x, pc.y, pc.z, math.random(100,150), 0, 0x40400000, 0)
+            local heading, spawn = GetNthClosestVehicleNodeFavourDirection(offset.x, offset.y, offset.z, pc.x, pc.y, pc.z, math.random(50,100), 0, 0x40400000, 0)
 
             vehicle[fcount]         = CreateVehicle(slctd_backup.car, spawn.x, spawn.y, spawn.z, heading, true, true)
             driver[fcount]      = CreatePedInsideVehicle(vehicle[fcount], 6, slctd_backup.ped, -1, true, true)
