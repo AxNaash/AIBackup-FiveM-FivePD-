@@ -1,3 +1,5 @@
+fx_version "cerulean"
+game "gta5"
 --[[
     FiveM Scripts
     Copyright C 2018
